@@ -1,4 +1,4 @@
-🔧 Predictive Maintenance System for CNC Machines
+###🔧 Predictive Maintenance System for CNC Machines
 Real-Time Fault Detection & Severity Prediction Using Machine Learning
 ---
 This intelligent predictive maintenance system revolutionizes CNC machine monitoring by leveraging machine learning to prevent costly equipment failures before they occur. Built during my internship at Maxbyte Technologies (Industry 4.0 solutions provider), this system analyzes live vibration sensor data to predict fault severity and optimize maintenance scheduling.
