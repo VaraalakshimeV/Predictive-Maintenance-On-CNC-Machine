@@ -1,30 +1,47 @@
-###🔧 Predictive Maintenance System for CNC Machines
-Real-Time Fault Detection & Severity Prediction Using Machine Learning
+# 🔧 Predictive Maintenance System for CNC Machines
+#### Real-Time Fault Detection & Severity Prediction Using Machine Learning
+
 ---
+
 This intelligent predictive maintenance system revolutionizes CNC machine monitoring by leveraging machine learning to prevent costly equipment failures before they occur. Built during my internship at Maxbyte Technologies (Industry 4.0 solutions provider), this system analyzes live vibration sensor data to predict fault severity and optimize maintenance scheduling.
----
-🎯 Key Highlights
 
-Real-Time Monitoring: Continuously analyzes vibration sensor data from four critical spindle motor components—baselooseness, bearing, misalignment, and unbalance—to detect anomalies instantly.
-Industry-Standard Classification: Implements ISO 10816 vibration standards to classify faults into four severity levels: No Failure, Low, Medium, and High, ensuring compliance with international maintenance protocols.
-Intelligent Risk Assessment: Calculates Risk Priority Numbers (RPN) using FMEA methodology (Severity × Occurrence × Detection) to scientifically prioritize maintenance actions and allocate resources efficiently.
-Advanced ML Model: Employs a Multi-Layer Perceptron (MLP) deep learning classifier achieving 98% accuracy—carefully selected after benchmarking against Logistic Regression, Random Forest, and XGBoost to balance performance and prevent overfitting.
-Actionable Insights: Generates fault-specific maintenance recommendations with root cause analysis, empowering maintenance teams with precise guidance to minimize downtime and extend machine lifespan.
-Interactive Visualization: Features dynamic Plotly dashboards displaying real-time metrics, trend analysis, and probability distributions for comprehensive machine health monitoring.
 ---
-🔬 Prediction Model
-MULTI-LAYER PERCEPTRON (MLP) CLASSIFIER
 
-98% Prediction Accuracy
-Balanced Performance (No Overfitting)
+## 🎯 Key Highlights
+
+* **Real-Time Monitoring**: Continuously analyzes vibration sensor data from four critical spindle motor components—baselooseness, bearing, misalignment, and unbalance—to detect anomalies instantly.
+
+* **Industry-Standard Classification**: Implements ISO 10816 vibration standards to classify faults into four severity levels: No Failure, Low, Medium, and High, ensuring compliance with international maintenance protocols.
+
+* **Intelligent Risk Assessment**: Calculates Risk Priority Numbers (RPN) using FMEA methodology (Severity × Occurrence × Detection) to scientifically prioritize maintenance actions and allocate resources efficiently.
+
+* **Advanced ML Model**: Employs a Multi-Layer Perceptron (MLP) deep learning classifier achieving 98% accuracy—carefully selected after benchmarking against Logistic Regression, Random Forest, and XGBoost to balance performance and prevent overfitting.
+
+* **Actionable Insights**: Generates fault-specific maintenance recommendations with root cause analysis, empowering maintenance teams with precise guidance to minimize downtime and extend machine lifespan.
+
+* **Interactive Visualization**: Features dynamic Plotly dashboards displaying real-time metrics, trend analysis, and probability distributions for comprehensive machine health monitoring.
+
 ---
-⚡ Key Features
-✅ Live Database Integration - MySQL-powered real-time data streaming
-✅ RPN-Based Prioritization - Data-driven maintenance scheduling
-✅ Comprehensive Recommendations - Fault-specific actionable insights
-✅ Interactive Dashboards - Plotly-powered live visualizations
-✅ ISO 10816 Compliance - Industry-standard severity classification
-✅ Multi-Fault Detection - Simultaneous monitoring of 4 vibration types
+
+## 🔬 Prediction Model
+
+**MULTI-LAYER PERCEPTRON (MLP) CLASSIFIER**
+
+- 98% Prediction Accuracy
+- Balanced Performance (No Overfitting)
+
+---
+
+## ⚡ Key Features
+
+✅ **Live Database Integration** - MySQL-powered real-time data streaming  
+✅ **RPN-Based Prioritization** - Data-driven maintenance scheduling  
+✅ **Comprehensive Recommendations** - Fault-specific actionable insights  
+✅ **Interactive Dashboards** - Plotly-powered live visualizations  
+✅ **ISO 10816 Compliance** - Industry-standard severity classification  
+✅ **Multi-Fault Detection** - Simultaneous monitoring of 4 vibration types
+
+
 ---
 LOGIN PAGE
 ---
