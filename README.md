@@ -46,7 +46,7 @@ This intelligent predictive maintenance system revolutionizes CNC machine monito
 LOGIN PAGE
 ---
 <img width="1110" height="538" alt="image" src="https://github.com/user-attachments/assets/a5e9dce3-f5e3-4c69-b152-658b4ace3ad4" />
- FAULT SEVERITY PREDICTION (NO FAILURE)
+FAULT SEVERITY PREDICTION (NO FAILURE)
 ---
 <img width="1114" height="518" alt="image" src="https://github.com/user-attachments/assets/b6eb301a-37d0-4251-9d98-acf917d5d23a" />
 FAULT SEVERITY PREDICTION (LOW FAILURE)
@@ -67,7 +67,7 @@ Severity Fault Detection for Live Data
 Priority Fault Detection for Live Data
 ---
 <img width="1091" height="551" alt="image" src="https://github.com/user-attachments/assets/b81ca9e9-2338-4269-b546-f74d6cb183ef" />
- RPN ANALYSIS DASHBOARD
+RPN ANALYSIS DASHBOARD
 ---
 <img width="1029" height="540" alt="image" src="https://github.com/user-attachments/assets/b64c05fd-1cda-487b-88df-08d5a4f846b5" />
 
