@@ -17,3 +17,7 @@ Real-time Database Monitoring
 RPN Analysis & Prioritization
 Fault-Specific Recommendations
 Live Interactive Dashboards
+
+
+<img width="1110" height="538" alt="image" src="https://github.com/user-attachments/assets/a5e9dce3-f5e3-4c69-b152-658b4ace3ad4" />
+
