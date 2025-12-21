@@ -1,2 +1,3 @@
 # Predictive-Maintenance-On-CNC-Machine
-Real-time fault detection and severity prediction system using Multi-Layer Perceptron. Predicts machine failures from vibration sensor data (baselooseness, bearing, misalignment, unbalance), provides Risk Priority Number (RPN) analysis, maintenance recommendations, and live monitoring dashboards.
+Stop CNC downtime before it happens! Predictive maintenance system using Multi-Layer Perceptron to classify fault severity from vibration data.
+Features: real-time monitoring, RPN risk analysis, automated recommendations. Reduces unplanned outages.
