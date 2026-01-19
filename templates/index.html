@@ -1,0 +1,263 @@
+{% extends "material/base.html" %}
+{% block content %}
+<head>
+  <style>
+    .card-panel {
+      background-color:rgb(19, 51, 123);
+      text-align: center;
+    }
+    .inputcontainer
+    {
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      text-decoration-color: azure;
+    }
+    .col s12 m4 offers 
+    {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inputcontainer2 {
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width:30%;
+  height:30%;
+  text-align: center;
+  margin: 0 auto;
+  text-decoration-color: azure;
+}
+h3{
+  color: azure;
+}
+h5{
+  color: azure;
+}
+.collection{
+  background-color:rgb(19, 51, 123);
+}
+.predict-btn {
+  background-color: rgb(19, 51, 123);
+  color: white;
+}
+
+.clear-btn {
+  background-color: rgb(19, 51, 123);
+  color: white;
+}
+.reset-btn {
+  background-color: rgb(19, 51, 123);
+  color: white;
+}
+.recom-btn {
+  background-color: rgb(19, 51, 123);
+  color: white;
+}
+.center {
+  text-align: center;
+}
+
+.btn {
+  margin-top: 10px;
+}
+.card-image {
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width:50%;
+  height:30%;
+  text-align: center;
+  margin: 0 auto;
+  text-decoration-color: azure;
+
+}
+
+/* .btn {
+  display: block;
+  margin: 10px auto;
+} */
+
+
+
+
+
+    </style>
+</head>
+
+          <div class="col s12 m4 offers">
+            <div class="card-panel">
+            <h3 style="text-align: center;" style="color:azure;">CNC MACHINE-SEVERITY PREDICTION</h3>
+            <a href="{{url_for('index')}}" class="btn btn-small reset-btn" style="float: right;">Reset</a>
+            
+          </div>
+
+    </div>
+    <div>
+      <h5 style="text-align: center;">Enter the sensor value to understand the cause of each fault type.</h5>
+    </div>
+<div class="container" style="background-color: transparent;">
+  <div class="row">
+    <div class="inputcontainer">
+      <div class="card-panel grey lighten-2 grey-text text-darken-10 z-depth-0" style="background-color: rgba(180, 175, 175, 0.5)">
+        <form action="{{ url_for('analyze')}}" method="POST">
+          <div class="input-field">
+            <p class="range-field">
+              <input type="range" id="Spindle_Motor_Baselooseness_VibrationInput" name="Spindle_Motor_Baselooseness_Vibration" min="0" max="45" value="0" step="0.1" >
+                <label for="Spindle_Motor_Baselooseness_Vibration">Spindle_Motor_Baselooseness_Vibration</label>
+                    
+          </div>
+          <div class="input-field">
+            <p class="range-field">
+              <input type="range" id="Spindle_Motor_Bearing_VibrationInput" name="Spindle_Motor_Bearing_Vibration" min="0" max="45" value="0" step="0.1"> 
+                <label for="Spindle_Motor_Bearing_Vibration">Spindle_Motor_Bearing_Vibration</label>
+          </div>
+          <div class="input-field">
+            <p class="range-field">
+              <input type="range" id="Spindle_Motor_Misalignment_VibrationInput" name="Spindle_Motor_Misalignment_Vibration" min="0" max="45" value="0"step="0.1" >
+                <label for="Spindle_Motor_Misalignment_Vibration">Spindle_Motor_Misalignment_Vibration</label>
+          </div>
+          <div class="input-field">
+            <p class="range-field">
+                <input type="range" id="Spindle_Motor_Unbalance_VibrationInput" name="Spindle_Motor_Unbalance_Vibration" min="0" max="45" value="0"step="0.1">
+                  <label for="Spindle_Motor_Unbalance_Vibration">Spindle_Motor_Unbalance_Vibration</label>
+          </div>
+                  
+          <div class="input-field">
+                    
+                      <option value="model">MLP-CLASSIFIER</option>
+                    
+          </div>
+                  <!-- <input type="submit" value="Predict" class="btn btn-small darkblue black-text waves-effect waves-dark">
+                  <input type="reset" value="Clear" class="btn btn-small brown1 black-text waves-effect waves-dark"> -->
+                  <input type="submit" value="Predict" class="btn btn-small predict-btn">
+                  <input type="reset" value="Clear" class="btn btn-small clear-btn">
+                </form>
+              </div>
+            </div>
+  </div>
+</div>
+      
+<div class="inputcontainer2"  style="background-color: rgba(180, 175, 175, 0.5)">
+                         
+            <p>Spindle_Motor_Baselooseness_Vibration: {{ Spindle_Motor_Baselooseness_Vibration }}</p>
+            <p>Spindle_Motor_Bearing_Vibration: {{ Spindle_Motor_Bearing_Vibration }}</p>
+            <p>Spindle_Motor_Misalignment_Vibration: {{ Spindle_Motor_Misalignment_Vibration}} </p>
+            <p>Spindle_Motor_Unbalance_Vibration: {{ Spindle_Motor_Unbalance_Vibration}}</p>
+              
+    
+</div>
+
+<div class="blank-space">  </div>
+
+                     
+        <div class="col s12 m4 offers"style="margin-top: 50px;">
+                <h5 style="text-align: center;"></h5>
+                  <div class="collection" role="alert" style="background-color:rgb(19, 51, 123);">
+                    <h5 style="text-align: center;">Severity of the Predicted Sensor Data</h5>
+                  </div>       				
+          <div class="card-image">
+                    
+            {% if result_prediction == ['0'] %}
+            <p class="btn btn-small green black-text waves-effect waves-dark" style="text-align: center;">NO FAILURE</p>
+
+            {% elif result_prediction == ['1']  %}
+            <p class="btn btn-small yellow black-text waves-effect waves-dark"> LOW FAILURE LEVEL</p>
+            <p>Click here to know what may be the cause of failure!!</p>
+              <a href="{{url_for('class_0')}}" class="btn btn-small recom-btn">Recommend</a>
+            
+            {% elif  result_prediction  == ['2']  %}
+            <p class="btn btn-small  orange black-text waves-effect waves-dark">MEDIUM FAILURE LEVEL</p>
+            <p class="btn btn-small red black-text waves-effect waves-dark">The machine is exhibiting signs of impending failure and should be maintained as soon as possible.</p>
+            <p>Click here to know what may be the cause of failure</p>
+            <a href="{{url_for('class_1')}}" class="btn btn-small recom-btn">Recommend</a>
+            
+            {% elif  result_prediction  == ['3']  %}
+               <p class="btn btn-small  red black-text waves-effect waves-dark">HIGH FAILURE LEVEL</p>
+                 <p class="btn btn-small red black-text waves-effect waves-dark">The machine is exhibiting signs of impending failure and should be maintained as soon as possible.</p>
+                 <p>Click here to know what may be the cause of failure</p>
+                  <a href="{{url_for('class_2')}}" class="btn btn-small recom-btn">Recommend</a>
+   
+            {% else %}
+            <!-- <p class="btn btn-small  red black-text waves-effect waves-dark">HIGH FAILURE LEVEL</p>
+            <p class="btn btn-small red black-text waves-effect waves-dark">The machine is exhibiting signs of impending failure and should be maintained as soon as possible.</p>
+            <p>Click here to know what may be the cause of failure</p>
+             <a href="{{url_for('class_2')}}" class="btn btn-small recom-btn">Recommend</a> -->
+                        
+                
+                       {% endif%}
+            </div>
+
+            <!-- <div class="row">
+              <form action="{{ url_for('predict')}} method="post" class="col s12">
+                <div class="row">
+                  <div class="input-field col s4">
+                      <label for="first_name"><b>Spindle_Motor_Baselooseness_Vibration</b></label>
+                      <br>
+                    <input placeholder="Spindle_Motor_Baselooseness_Vibration" name="Spindle_Motor_Baselooseness_Vibration" id="first_name" type="text" class="validate">
+                  </div>
+                  <div class="input-field col s4">
+          
+                    <label for="last_name"><b>Spindle_Motor_Bearing_Vibration </b></label>
+                      <br>
+                    <input id="last_name" name="Spindle_Motor_Bearing_Vibration" placeholder="Spindle_Motor_Bearing_Vibration"  type="text" class="validate">
+          
+                  </div>
+          
+                  <div class="input-field col s4">
+                      <label for="_name"><b>Spindle_Motor_Misalignment_Vibration</b></label>
+                      <br>
+                    <input id="_name" name="Spindle_Motor_Misalignment_Vibration" placeholder="Spindle_Motor_Misalignment_Vibration " type="text" class="validate">
+          
+                  </div>
+                  <div class="input-field col s4">
+                    <label for="_name"><b> Spindle_Motor_Unbalance_Vibration</b></label>
+                    <br>
+                  <input id="_name" name=" Spindle_Motor_Unbalance_Vibration" placeholder=" Spindle_Motor_Unbalance_Vibration " type="text" class="validate">
+        
+                </div>
+          
+                </div>
+          
+                <div class="row center">
+          
+                    <button type="submit" class="btn-large waves-effect waves-light orange">Predict Probability</button>
+                </div>
+              </form>
+                </div>
+          
+                <br>
+                  {{pred}}<br>
+          
+              </div>
+            </div>
+          
+          
+              <br><br>
+            </div>
+            </div>>
+
+            <div>
+              <h1>Results</h1>
+            
+            </div>
+           -->
+
+           
+      {% endblock%}
+
+      {% block scripts %}
+      {{super()}}
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+
+      <script>
+      
+        $(document).ready(function(){
+          $('select').formSelect();
+        });
+      </script>
+      
+      {% endblock %}

@@ -1,0 +1,44 @@
+{% extends "material/base.html" %}
+{% block content %}
+<div class="col s12 m4 offers">
+    <div class="card-panel blue lighten-4 grey-text text-darken-4 z-depth-0">
+    <h2>TO KNOW THE MACHINE HISTORY</h2>
+</div>
+</div>
+
+
+<div class="container">
+    <ul>
+        <table class="responsive-table">
+            <thead>
+              <tr class="thead-dark">
+                <th>Spindle_Motor_Baselooseness_Vibration</th>
+                <th>Spindle_Motor_Bearing_Vibration</th>
+                <th>Spindle_Motor_Misalignment_Vibration</th>
+                <th>Spindle_Motor_Unbalance_Vibration</th>
+                <th>Fault type</th>
+                <th>Specific fault</th>
+                <th>Log</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><p href="{{url_for('index')}}">Spindle_Motor_Baselooseness_Vibration: {{ Spindle_Motor_Baselooseness_Vibration }}</a></td>
+                <td>{{ result_prediction }}</td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+    </ul>
+</div>
+{% endblock %}
+
+
+{% block scripts %}
+{{ super() }}
+
+
+
+
+{% endblock %}

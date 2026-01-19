@@ -1,0 +1,111 @@
+{% extends "material/base.html" %}
+{% block content %}
+<head>
+    <style>
+      .card-panel {
+        background-color:rgb(19, 51, 123);
+        text-align: center;
+      }
+      body {
+    background-image: url('../static/Banner1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+}
+.card-content {
+  background-color:rgba(19, 50, 123, 0.348);
+}
+ol {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+    </style>
+  </head>
+  
+  <div class="col s12 m4 offers">
+    <div class="card-panel">
+    <h3 style="text-align: center;" style="color:azure;">CNC MACHINE-RECOMMEND SOLUTION</h3>
+    </div>
+  </div>
+
+<!-- <div class="container">
+    <ul>
+        <h3>CRITICAL FAILURES</h2>
+            <h4>Failures that may occur in this Fault type:</h4>
+            <li>Critical failures in electric motors may be caused by problems with the motor bearings or by misalignment of the spindle motor.</li>
+            <li>Due to spindle motor bearing vibration</li>
+            <ul>
+                <li>The most common reason for Spindle Motor Bearing Vibration is wear and tear on the bearings. This can be caused by a number of factors, including age, contamination, lubrication, and overload.</li>
+                <li>Another common reason for Spindle Motor Bearing Vibration is misalignment of the spindle motor. This can be caused by improper installation or wear and tear on the machine.</li>
+                <li>If the sensor value of Spingle Motor Bearing Vibration and Spindle Motor Baselooseness Vibration is more or less leads into same range then it lead to some critical faults.</li>
+                <li>If the vibration caused by an imbalance in the spindle motor increases while the sensor value for spindle motor base looseness is within normal limits, then the machine may experience unacceptable failures.</li>
+
+            </ul>
+        
+    </ul>
+</div> -->
+
+<div class="row">
+    <div class="col s3 m6 offset-m3">
+      <div class="card">
+        <div class="card-content">
+          <span class="card-title"></span>
+          <ol>
+            <h4 style="text-align: center;">CRITICAL FAILURES</h4>
+            <h5>Spindle_Motor_Baselooseness_Vibration</h5>
+            <li>If the vibration sensor value of baselooseness is increases with vibration sensor value of misalignment then it might lead to faults in a machine.</li>
+            <li>If the vibration sensor value of baselooseness is increases with vibration sensor value of unbalanced then it might lead to faults in a machine.</li>
+            <li>When the spindle motor base is loose, it can cause the spindle motor to vibrate. This vibration can cause the spindle motor to become unbalanced, which can lead to reduced accuracy, increased wear and tear on the machine components, noise and vibration, and damage to the spindle motor and other machine components.</li>
+            <li> A loose spindle motor base can also cause the spindle motor to become misaligned. This misalignment can lead to the same problems as spindle motor unbalance.</li>
+            <h6><strong>Preventions:</strong></h6>
+             <li>Inspect the spindle motor base regularly for signs of looseness. If any looseness is found, the bolts and screws should be tightened immediately.</li>
+             <li>Tighten the spindle motor mounting hardware to the manufacturer's specifications on regular basis.</li>
+             <li>Avoiding excessive vibration in the machine tool.</li>
+
+             <h5>Spindle_Motor_Bearing_Vibration</h5>
+             <li>The spindle motor bearing is a critical component of the machine, and its vibration correlated to other vibration sensor. This means that minor faults in the spindle motor bearing are unlikely to cause minor faults in other machine components. However, major faults in the spindle motor bearing will likely cause major machine failures.</li>
+             <li>If the spindle motor is not properly aligned or the base is loosed, it can cause the bearings to vibrate. This vibration can lead to increased wear and tear on the bearings, which can reduce their lifespan. Additionally, misalignment can cause the bearings to overheat, which can lead to premature failure.</li>
+             <h6><strong>Preventions:</strong></h6>
+             <li>Regularly inspect the spindle motor bearing for wear and tear, misalignment, contamination, and improper lubrication.</li>
+             <li>Keep the spindle motor bearing clean and free of contamination.</li>
+             <li>Make sure that the spindle motor is properly lubricated.</li>
+             <li>Maintaining the correct lubrication of the spindle motor bearings. This will help to reduce friction and wear and tear on the bearings.</li>
+
+             <h5>Spindle_Motor_Misalignment_Vibration</h5>
+             <li>If the sensor value of baselooseness increases with increase in misaligment then failures occur in machine's misaligment.</li>
+             <li>If the sensor value of unbalanced vibration increases with increase in misaligment then failures occur in machine's misaligment.</li>
+             <li>Reduced accuracy of the machined parts: When the spindle motor is misaligned, it can cause the cutting tool to vibrate. This vibration can be transmitted to the workpiece, which can reduce the accuracy of the machined parts.</li>
+             <h6><strong>Preventions:</strong></h6>
+             <li>Machines should be designed and manufactured to minimize the risk of misalignment. This includes using high-quality materials and components, and machining the components to precise tolerances.</li>
+             <li>Machines should be regularly inspected for misalignment. This can be done using a variety of tools and techniques, such as laser alignment, dial indicators, and feeler gauges. If misalignment is found, it should be corrected immediately.</li>
+             <li>The spindle motor is a critical component of a CNC machine, and it is important to ensure that it is properly aligned. This can be done using a laser alignment tool.</li>
+
+             <h5>Spindle_Motor_Unbalance_Vibration</h5>
+             <li>When the spindle motor is unbalanced, it creates a centrifugal force that causes the spindle to vibrate. This vibration can be transmitted to the rest of the CNC machine, causing more noise and vibration</li>
+             <li>If the sensor value of unbalanced vibration gradually increases with misaligment sensor value or equally increases then  it lead failures in machines.</li>
+             <li>If the sensor value of unbalanced vibration gradually increases with baselooseness sensor value then  it lead failures in machines.</li>
+             <li>Unbalance can cause increased wear and tear on the spindle motor bearings and other machine components.</li>
+             <h6><strong>Preventions:</strong></h6>
+             <li>Keep the spindle motor shaft and bearings clean and well-lubricated.</li>
+              <li>Inspect the spindle motor regularly for wear and tear. </li>
+              <li>Balance the spindle motor on a regular basis.</li>
+              <li>Machines should be properly installed and balanced according to the manufacturer's instructions.</li>
+        </ol>
+          
+        </div>
+      </div>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block scripts %}
+{{ super() }}
+
+
+
+
+{% endblock %}

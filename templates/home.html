@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="templates/style.css">
+  <style>
+  .container2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  body{
+  
+    background-image: url('../static/Banner1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+  }
+  h3{
+    color:rgb(238, 239, 240);
+    margin-bottom: 100px;
+    text-align:end;
+
+  }
+  .col {
+    flex-basis: 100%;
+    height: 150%;
+  }
+  .navbar {
+  height: 50px;
+}
+.container {
+  background-color:rgba(244, 235, 230, 0.023);
+}
+
+.card {
+  background-color:rgba(19, 50, 123, 0.126);
+}
+
+.card-content {
+  background-color:rgba(19, 50, 123, 0.126);
+}
+
+form {
+  background-color:rgba(19, 50, 123, 0.126);
+}
+.name{
+  color:black;
+}
+.nav-right {
+  float: right;
+}
+
+.nav-logo {
+  display: inline-block;
+  max-width: 130px;
+  max-height: 130px;
+}
+.nav-link {
+  color: rgb(19, 51, 123);
+  font-size:20px;
+}
+  </style>
+</head>
+<body>
+    <nav class="navbar" style="background-color:rgb(241, 242, 246);" style="height: max-content;">
+        <div class="nav-wrapper" style="height:30%;">
+          <ul class="nav nav-pills" style="height:30%;">
+            
+            <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+            <li class="nav-item"><a class="nav-link">Connect Server</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+          </ul>
+          <div class="nav-right">
+            <div class="nav-logo">
+              <img src="static/Maxbyte.png" alt="Company Logo" class="nav-logo">
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="container3" style="width: 1000px;">
+        <div class="row">
+          <h3 style="margin-top: 100px" style="float:inline-start;" style="font: 20px Arial; color: rgba(0, 234, 255, 0);" style="margin-bottom: 150px;"> PREDICTIVE MAINTENANCE-CNC MACHINE</h3>
+
+    
+        </div>
+    </div>  
+  <div class="container4">
+    <div class="row">
+      <div class="col s12 m6 offset-m3">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title" style="text-align: center;">LOGIN</span>
+            <form action="/login" method="post">
+              <div class="input-field">
+                <input id="username" type="text" name="username">
+                <label for="username" class="white-text">Username</label>
+              </div>
+              <div class="input-field">
+                <input id="password" type="password" name="password">
+                <label for="password" class="white-text">Password</label>
+              </div>
+              <a href="{{url_for('index')}}" class="btn btn-small dark blue white-text waves-effect waves-dark" style="margin-top: 100px",color="rgb(159, 65, 2)"type="submit" >Login</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container2">
+    <div class="row">
+      <div class="col s3">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title darkgrey-text"><strong> Machine Failure</strong></span>
+            <p class="white-text"><strong>A maintenance team is inspecting a machine and wants to know what type of failure may occur so that they can take appropriate action before any failure affect the machine condition.</strong></p>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col s3 ">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title darkgrey-text"><strong>Risk Priority Number Analysis</strong></span>
+            <p class="white-text"><strong>A maintenance team  wants to identify the most risky failure type from the vibartion data so that they prioritize preventive maintenance tasks and allocate resources accordingly.</strong></p>
+          </div>
+        </div>
+      </div>
+      <div class="col s3 ">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title darkgrey-text"><strong>Machine Monitor</strong></span>
+            <p class="white-text"><strong>A maintenance team wants to monitor the health of a machine then this system collect vibration data from the machine on a regular basis and identify any trends or anomalies.</strong></p>
+          </div>
+        </div>
+      </div>
+      <div class="col s3">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title darkgrey-text"><strong>Recommendation System</strong></span>
+            <p class="white-text"><strong>A maintenance team wants to what may be the reason of particular fault type in the machine so that they can easily find the root cause of the machine failure which is time consuming.</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>

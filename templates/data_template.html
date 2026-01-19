@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Retrieval</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+      <script>
+      function openPopup() {
+  document.getElementById("popup").style.display = "block";
+}
+
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
+}
+</script>
+    
+    <style>
+      /* .card-panel {
+        background-color:rgb(19, 51, 123);
+        text-align: center;
+      } */
+      .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  margin: 15% auto;
+  width: 50%;
+  box-shadow: 0 4px 8px 0 rgba(247, 245, 245, 0.2);
+  padding: 20px;
+  background-color:rgba(19, 50, 123, 0.796);
+}
+
+.modal-footer {
+  text-align:center;
+  margin-top: 10px;
+  background-color:rgb(19, 51, 123);
+}
+/* #lineChart1, #lineChart2, #lineChart3, #pieChart {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+  } */
+
+  #lineChart1 {
+    top: 50%;
+    left: 10%;
+    
+    width: 50%;
+    height: 50%;
+  }
+
+  #lineChart2 {
+    top: 70%;
+    left: 70%;
+   
+    width: 50%;
+    height: 50%;
+  }
+
+  #pieChart {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    width: 50%;
+    height: 50%;
+  }
+
+  #lineChart3 {
+    top: 70%;
+    left: 0;
+    width: 50%;
+    height: 50%;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+    </style>
+</head>
+<body>
+    <nav class="navbar" style="background-color:rgb(19, 51, 123);">
+        <div class="nav-wrapper">
+          <ul class="nav nav-pills">
+            <li class="nav-item"><a href="visualization.html">DashBoard</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="col s12 m4 offers">
+        <div class="card-panel">
+        <h4 style="text-align: center;" style="color:azure;">Live Visualization</h4>
+        </div>
+      
+      </div>
+      <div class="container">
+       <div id="lineChart1">
+            {{ chart_html | safe }}
+      </div>
+
+      <div id="lineChart2">
+        {{ chart_html_severity | safe}}
+      </div>
+      
+      <div id="lineChart3">
+        {{ chart_html_detection | safe}}
+      </div>
+      
+      <div id="pieChart">
+        {{ pie_chart_html_detection | safe}}
+      </div>
+
+    </div>
+
+      <div id="pieChart">
+        {{ pie_chart_html_detection_2 | safe}}
+      </div>
+
+      <div id="barChart">
+        {{ chart_html_bar  |  safe}}
+      </div>
+
+<center><h4 style="text-align: center;" style="margin-bottom: 100px;">Severity-Fault-Detection For Live Data</h4></center>
+    <div>
+        {{data2 | safe }}
+     </div>
+     <center><h4 style="text-align: center;">Priority Detection For Live Data</h4></center>
+     <div>
+      {{data3 | safe }}
+   </div>
+ <center><h4 style="text-align: center;" style="margin-top: 200px;">RISK PRIORITY NUMBER ANALYSIS</h4></center>
+ <div class="container1">
+  <div class="box">
+        {{ fault_type_probs|safe }}
+    
+  </div>
+</div>
+
+<!-- <div>
+    {% if max_rpn_fault_type == 1 %}
+    <p>Low</p>
+  {% elif max_rpn_fault_type == 2 %}
+    <p>RPN analysis indicates that the medium level has a high risk priority number, so the machine should be maintained based on the given recommendation for major faults to minimize the risk of accidents and failures before they occur.</p>
+  {% else %}
+    <p>RPN analysis indicates that the medium level has a high risk priority number, so the machine should be maintained based on the given recommendation for major faults to minimize the risk of accidents and failures before they occur.</p>
+  {% endif %}
+</div> -->
+
+<button type="button" onclick="openPopup()">Show RPN Analysis</button>
+
+<div id="popup" class="modal">
+  <div class="modal-content">
+    <p>RPN analysis indicates that the medium level has a high risk priority number, so the machine should be maintained based on the given recommendation for major faults to minimize the risk of accidents and failures before they occur.</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" onclick="closePopup()">Close</button>
+  </div>
+</div>
+</body>
+</html>  
+
