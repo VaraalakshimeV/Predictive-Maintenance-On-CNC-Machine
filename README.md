@@ -50,7 +50,7 @@ Engineered an intelligent RPN-based ranking system that prioritizes maintenance 
 |--------|--------|-------|--------|
 | **Fault Detection** | Manual inspection | 99% automated | **Eliminated human error** |
 | **Planning Time** | 2-3 days | Real-time | **Instant insights** |
-| **Unplanned Downtime** | Frequent | Reduced 60% | **Cost savings** |
+| **Downtime Prevention** | Reactive repairs | Predictive alerts | **Early intervention** |
 | **Risk Assessment** | Subjective | Quantified (RPN) | **Data-driven decisions** |
 | **Fault Classification** | Inconsistent | ISO 10816 standard | **Standardized process** |
 
@@ -368,7 +368,7 @@ Engineered an intelligent RPN-based ranking system that prioritizes maintenance 
 
 📊 **Accuracy Improvement:** 99% automated detection vs manual inspection prone to errors
 
-🎯 **Downtime Reduction:** 60% decrease in unplanned machine breakdowns
+🎯 **Downtime Prevention:** Early fault detection enables proactive maintenance before failures occur
 
 💡 **Standardization:** Consistent fault classification using ISO 10816 standards
 
@@ -450,6 +450,7 @@ Based on international standards for vibration severity:
 ### **Model Performance**
 
 Tested multiple algorithms on the vibration dataset:
+(Training set - not generalizable)
 
 | Algorithm | Accuracy |
 |-----------|----------|
@@ -568,7 +569,7 @@ Developed during Data Scientist internship at **Maxbyte Technologies Services Pr
 
 ## 🙏 Acknowledgments
 
-- **Maxbyte Technologies** - Industrial partnership and domain expertise
+- **Maxbyte Technologies Services Private Limited** - Industrial partnership and domain expertise
 - **ISO Technical Committee** - Vibration standards documentation
 - **Open Source Community** - Flask, Scikit-learn, Plotly contributors
 
