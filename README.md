@@ -4,10 +4,10 @@
 <div align="center">
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
-![Flask](https://img.shields.io/badge/Flask-2.3-green.svg)
+![Flask](https://img.shields.io/badge/Flask-3.0.0-green.svg)
 ![ML](https://img.shields.io/badge/ML-MLP_Classifier-orange.svg)
-![MySQL](https://img.shields.io/badge/MySQL-8.0-blue.svg)
-![Plotly](https://img.shields.io/badge/Plotly-5.0-purple.svg)
+![MySQL](https://img.shields.io/badge/MySQL-0.0.3-blue.svg)
+![Plotly](https://img.shields.io/badge/Plotly-5.17.0-purple.svg)
 ![Status](https://img.shields.io/badge/Status-Production-brightgreen.svg)
 
 **Developed at Maxbyte Technologies | Real Production Deployment**
