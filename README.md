@@ -535,7 +535,7 @@ I'm a **Data Analytics Engineering graduate student at Northeastern University**
 
 This project demonstrates my ability to:
 - ✅ Build production-ready ML systems for industrial applications
-- ✅ Deliver measurable business value (60% downtime reduction)
+- ✅ Deliver systems that enable proactive maintenance strategies
 - ✅ Work with IoT sensor data and predictive analytics
 - ✅ Implement industry standards (ISO 10816)
 
