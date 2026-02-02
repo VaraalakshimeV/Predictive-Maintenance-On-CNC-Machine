@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+*.egg-info/
+*.egg
+
+# Virtual environments
+ENV/
+env/
+venv/
+
+# Database
+*.db
+*.sqlite3
+*.sql
+
+# Environment variables (IMPORTANT!)
+.env
+*.env
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pytest
+.pytest_cache/
+
+# Model files (if too large)
+# *.pkl
