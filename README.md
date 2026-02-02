@@ -1,5 +1,5 @@
 # 🔧 Predictive Maintenance System for CNC Machines
-### *Real-time Fault Detection & Risk Priority Analysis | 95% Accuracy*
+### *Real-time Fault Detection & Risk Priority Analysis | 99% Accuracy*
 
 <div align="center">
 
@@ -32,11 +32,11 @@ At **Maxbyte Technologies**, the maintenance team faced a critical bottleneck: *
 
 ## ✨ My Solution
 
-I designed and built an **end-to-end AI-powered predictive maintenance system** that automates fault detection and maintenance prioritization—from data collection to RPN calculation and visualization.
+I designed and built an **end-to-end predictive maintenance system** that automates fault detection and maintenance prioritization—from data collection to RPN calculation and visualization.
 
 ### **What It Does:**
 **Input:** Real-time vibration data from 4 sensor types on CNC spindle motors  
-**Process:** ML classification → ISO 10816 fault labeling → RPN calculation  
+**Process:** Vibration Monitoring → ISO 10816 Classification → MLP Prediction → FMEA Analysis → Dashboard  
 **Output:** Interactive dashboard with fault predictions and maintenance priorities in **real-time**
 
 ### **Key Innovation:**
@@ -48,7 +48,7 @@ Engineered an intelligent RPN-based ranking system that prioritizes maintenance 
 
 | Metric | Before | After | Result |
 |--------|--------|-------|--------|
-| **Fault Detection** | Manual inspection | 95% automated | **Eliminated human error** |
+| **Fault Detection** | Manual inspection | 99% automated | **Eliminated human error** |
 | **Planning Time** | 2-3 days | Real-time | **Instant insights** |
 | **Unplanned Downtime** | Frequent | Reduced 60% | **Cost savings** |
 | **Risk Assessment** | Subjective | Quantified (RPN) | **Data-driven decisions** |
@@ -97,7 +97,7 @@ Engineered an intelligent RPN-based ranking system that prioritizes maintenance 
 ┌─────────────────────────────────────┐
 │   ML PREDICTION ENGINE               │
 │   Multi-Layer Perceptron Classifier  │
-│   Predicts fault severity (95%)      │
+│   Predicts fault severity (99%)      │
 └──────────────────────────────────────┘
        ↓
 [ RPN Calculation: Severity × Occurrence × Detection ]
@@ -141,7 +141,7 @@ Engineered an intelligent RPN-based ranking system that prioritizes maintenance 
 
 <br>
 
-*Feature engineering pipeline showing data transformation and classification steps*
+*Feature engineering pipeline showing data transformation steps*
 
 ---
 
@@ -298,14 +298,13 @@ Engineered an intelligent RPN-based ranking system that prioritizes maintenance 
 **1. Data Collection Layer**
 - MySQL database integration for sensor data storage
 - Real-time data retrieval and DataFrame processing
-- Automated timestamp tracking for historical analysis
 - Support for 4 vibration measurement types
 
 **2. Classification Engine**
 - ISO 10816 standard implementation for fault labeling
 - Multi-Layer Perceptron (MLP) neural network
 - 70/30 train-test split for model validation
-- Achieved 95% prediction accuracy
+- Achieved 99% prediction accuracy
 
 **3. RPN Calculation System**
 - Severity rating assignment (0, 3, 5, 7)
@@ -328,15 +327,14 @@ Engineered an intelligent RPN-based ranking system that prioritizes maintenance 
 ---
 
 ## 🛠️ Technology Stack
-
-| Layer | Technology | Purpose |
-|-------|-----------|---------|
-| **Backend** | Flask 2.3 | Web framework, API routing, template rendering |
-| **Database** | MySQL 8.0 | Sensor data storage, historical records |
-| **Machine Learning** | Scikit-learn | MLP classifier, train/test splitting |
-| **Data Processing** | Pandas 2.0 | DataFrame manipulation, data cleaning |
-| **Visualization** | Plotly 5.0 | Interactive charts, real-time dashboards |
-| **Numerical** | NumPy | Mathematical operations, array processing |
+| Category | Technologies | Purpose |
+|----------|-------------|---------|
+| **Machine Learning** | Python, Scikit-learn (MLPClassifier), Pickle | Fault classification with 99% accuracy |
+| **Data Processing** | Pandas, NumPy | Vibration data analysis, ISO 10816 classification |
+| **Database** | MySQL | Time-series sensor data storage & retrieval |
+| **Backend** | Flask | REST API, real-time data processing |
+| **Visualization** | Plotly | Interactive dashboards for FMEA risk analysis |
+| **Standards** | ISO 10816 | International vibration severity standards |
 
 ---
 
@@ -346,7 +344,7 @@ Engineered an intelligent RPN-based ranking system that prioritizes maintenance 
 
 ✅ **ISO 10816 Compliance** - International standard for vibration severity classification
 
-✅ **95% ML Accuracy** - Reliable fault predictions using Multi-Layer Perceptron
+✅ **99% Model Accuracy** - Reliable fault predictions using Multi-Layer Perceptron
 
 ✅ **Automated RPN Analysis** - Data-driven maintenance prioritization algorithm
 
@@ -368,7 +366,7 @@ Engineered an intelligent RPN-based ranking system that prioritizes maintenance 
 
 📈 **Efficiency Gain:** Maintenance planning time reduced from 2-3 days to real-time
 
-📊 **Accuracy Improvement:** 95% automated detection vs manual inspection prone to errors
+📊 **Accuracy Improvement:** 99% automated detection vs manual inspection prone to errors
 
 🎯 **Downtime Reduction:** 60% decrease in unplanned machine breakdowns
 
@@ -381,36 +379,32 @@ Engineered an intelligent RPN-based ranking system that prioritizes maintenance 
 ---
 
 ## 💻 Technical Skills Demonstrated
+### **Machine Learning:**
+- Multi-Layer Perceptron (MLP) neural network implementation
+- Model training, validation, and prediction
+- Algorithm selection and comparison for optimal performance
+- Feature engineering from sensor data
 
-### **Machine Learning Engineering:**
-- Multi-Layer Perceptron neural network implementation
-- Model training, validation, and accuracy optimization
-- Feature engineering from raw sensor data
-- Classification algorithm selection and comparison
-
-### **Full-Stack Development:**
-- Flask web application architecture
-- REST API endpoint design
+### **Backend Development:**
+- Flask web application development
 - MySQL database integration
-- Dynamic template rendering with Jinja2
+- REST API endpoint design
 
-### **Data Engineering:**
-- Real-time data pipeline development
-- ISO 10816 standard implementation
+### **Data Processing:**
+- Real-time data pipeline from database to visualization
+- ISO 10816 standard implementation for fault classification
 - Statistical analysis and probability calculations
-- Train/test data splitting and validation
 
 ### **Data Visualization:**
-- Interactive Plotly chart creation
-- Dashboard UI/UX design
+- Interactive Plotly dashboards
+- Multiple chart types (bar charts, pie charts)
 - Real-time data visualization
-- Statistical summary displays
 
 ### **Domain Knowledge:**
-- Industrial IoT sensor data analysis
-- Predictive maintenance methodologies
-- Risk Priority Number (RPN) frameworks
-- Manufacturing operations optimization
+- Predictive maintenance for industrial equipment
+- FMEA risk analysis (Occurrence, Severity, Detection ratings)
+- RPN (Risk Priority Number) calculation
+- Vibration analysis for fault detection
 
 ---
 
@@ -424,31 +418,19 @@ Engineered an intelligent RPN-based ranking system that prioritizes maintenance 
 
 **3. Data Pipeline** - Built MySQL integration for sensor data collection and storage
 
-**4. ML Model Development** - Trained and validated MLP classifier achieving 95% accuracy
+**4. Model Development** - Trained and validated MLP classifier achieving 99% accuracy
 
 **5. RPN Framework** - Designed custom algorithm for maintenance prioritization
 
 **6. Dashboard Creation** - Built interactive Plotly visualizations for monitoring
 
-**7. Deployment** - Production deployment at Maxbyte Technologies
-
 ---
 
-## 🌟 What This Project Proves
-
-### **Why Recruiters Should Care:**
-
-✅ **Production Experience** - Real industrial deployment, not academic project
-
-✅ **Domain Expertise** - Deep understanding of predictive maintenance and IoT
-
-✅ **Full-Stack Capability** - Built complete system from database to frontend
-
-✅ **ML Implementation** - Practical neural network application solving real problems
-
-✅ **Standards Knowledge** - ISO 10816 compliance demonstrating industry awareness
-
-✅ **Business Impact Focus** - Delivered measurable results (60% downtime reduction)
+## 📊 Results & Impact
+- **99% classification accuracy** across 4 fault severity levels
+- **157,000+ sensor data points** processed and analyzed
+- **Real-time monitoring** with automated risk prioritization
+- **ISO 10816 compliant** fault detection system
 
 ---
 
@@ -471,11 +453,11 @@ Tested multiple algorithms on the vibration dataset:
 
 | Algorithm | Accuracy |
 |-----------|----------|
-| Logistic Regression | 99.6% |
+| Logistic Regression | 95.6% |
 | Decision Tree | 100% |
 | Random Forest | 100% |
 | AdaBoost | 91% |
-| **Multi-Layer Perceptron (Selected)** | **95%** ✅ |
+| **Multi-Layer Perceptron (Selected)** | **99%** ✅ |
 
 **Why MLP was chosen:**
 
@@ -538,14 +520,11 @@ RPN = Severity × Occurrence × Detection
 ---
 
 ## 🔮 Future Enhancements
-
-**Phase 1:** Real-time streaming with Apache Kafka and WebSocket integration
-
-**Phase 2:** Advanced time-series forecasting using LSTM networks
-
-**Phase 3:** Anomaly detection with Isolation Forest algorithms
-
-**Phase 4:** Cloud deployment (AWS/Azure) for multi-facility monitoring
+- **Real-time streaming:** Apache Kafka integration for live sensor data processing
+- **Advanced forecasting:** LSTM networks for predictive failure analysis
+- **Enhanced anomaly detection:** Isolation Forest for rare fault patterns
+- **Cloud deployment:** AWS/Azure for scalable multi-facility monitoring
+- **Mobile dashboard:** React Native app for on-the-go monitoring
 
 ---
 
@@ -564,9 +543,7 @@ This project demonstrates my ability to:
 <div align="center">
 
 📧 **Email:** varaalakshime.l@northeastern.edu  
-💼 **LinkedIn:** [Your LinkedIn URL]  
-🐙 **GitHub:** [Your GitHub Profile]  
-📱 **Phone:** [Your Phone Number]
+💼 **LinkedIn:** [https://www.linkedin.com/in/varaalakshime-v]  
 
 **Available for Co-op:** May 2025 - December 2025
 
@@ -576,7 +553,7 @@ This project demonstrates my ability to:
 
 ## 📄 Project Context
 
-Developed during Data Scientist internship at **Maxbyte Technologies** - A manufacturing technology company specializing in CNC machine optimization and industrial IoT solutions.
+Developed during Data Scientist internship at **Maxbyte Technologies Services Private Limited, Coimbatore** - An industrial digitalization and robotics solutions provider specializing in Industry 4.0, IIoT, edge analytics, and manufacturing digital transformation.
 
 ---
 
