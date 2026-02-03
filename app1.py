@@ -14,10 +14,10 @@ from plotly.subplots import make_subplots
 app = Flask(__name__)
 
 db_config = {
-    'host': '127.0.0.1',
-    'user': 'root',
-    'password': 'varumysql',
-    'database': 'pdm'
+    'host': os.getenv('DB_HOST', '127.0.0.1'),
+    'user': os.getenv('DB_USER', 'root'),
+    'password': os.getenv('DB_PASSWORD', 'your_password_here'),
+    'database': os.getenv('DB_NAME', 'pdm')
 }
 
 
@@ -416,4 +416,5 @@ def get_data1():
 
 
 if __name__ == '__main__':
+
     app.run(debug=True) 
