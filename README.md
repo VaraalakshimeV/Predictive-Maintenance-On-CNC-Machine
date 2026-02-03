@@ -13,7 +13,7 @@
 **Developed at Maxbyte Technologies | Real Production Deployment**
 
 </div>
----
+
 This is a portfolio project showcasing work completed during my internship at Maxbyte Technologies. The repository is for demonstration purposes only.
 ---
 
