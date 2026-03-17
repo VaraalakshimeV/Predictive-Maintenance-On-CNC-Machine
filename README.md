@@ -345,7 +345,7 @@ Engineered an intelligent RPN-based ranking system that prioritizes maintenance 
 
 ✅ **ISO 10816 Compliance** - International standard for vibration severity classification
 
-✅ **99% Model Accuracy** - Reliable fault predictions using Multi-Layer Perceptron
+✅ **99.8% Model Accuracy** - Reliable fault predictions using Multi-Layer Perceptron
 
 ✅ **Automated RPN Analysis** - Data-driven maintenance prioritization algorithm
 
