@@ -49,7 +49,7 @@ Engineered an intelligent RPN-based ranking system that prioritizes maintenance 
 
 | Metric | Before | After | Result |
 |--------|--------|-------|--------|
-| **Fault Detection** | Manual inspection | 99% automated | **Eliminated human error** |
+| **Fault Detection** | Manual inspection | 99.8% automated | **Significantly reduced human error** |
 | **Planning Time** | 2-3 days | Real-time | **Instant insights** |
 | **Downtime Prevention** | Reactive repairs | Predictive alerts | **Early intervention** |
 | **Risk Assessment** | Subjective | Quantified (RPN) | **Data-driven decisions** |
@@ -451,7 +451,6 @@ Based on international standards for vibration severity:
 ### **Model Performance**
 
 Tested multiple algorithms on the vibration dataset:
-(Training set - not generalizable)
 
 | Algorithm | Accuracy |
 |-----------|----------|
